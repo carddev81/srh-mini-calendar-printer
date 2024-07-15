@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src *">
+  <title>SRH Mini Calendar App</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+  <!-- buttons -->
+  <div class="container-fluid d-print-none">
+    <div class=card-container>
+      <div id="printBtn" class="card card-small" tabindex="0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path
+            d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z" />
+        </svg>
+
+        <span>Print</span>
+      </div>
+      <div id="changeLogo" class="card card-small" tabindex="1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path
+            d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+        </svg>
+        <span>Logos</span>
+      </div>
+    </div>
+    <div class="text-center">
+      <div class=card-container>
+        <div id="prevBtn" class="card card-xsmall">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z" />
+          </svg>
+        </div>
+        <span id="selectedYear"></span>
+        <div id="nextBtn" class="card card-xsmall">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- calendar -->
+  <div id="srh-calendar" class="container-fluid bg-light border border-dark rounded-lg mb-5 test">
+    <!-- logos -->
+    <div class="row row-cols-9 pt-1 pb-1">
+      <div id="logo1" class="col">Logo 1</div>
+      <div id="logo2" class="col">Logo 2</div>
+      <div id="logo3" class="col">Logo 3</div>
+      <div id="logo4" class="col">Logo 4</div>
+      <div id="year" class="col font-weight-bold year"></div>
+      <div id="logo5" class="col">Logo 5</div>
+      <div id="logo6" class="col">Logo 6</div>
+      <div id="logo7" class="col">Logo 7</div>
+      <div id="logo8" class="col">Logo 8</div>
+    </div>
+    <!-- days of the week -->
+    <div class="row row-cols-4 border-bottom border-dark days-of-week pl-1">
+      <div id="col1" class="col pr-4"></div>
+      <div id="col2" class="col pr-4"></div>
+      <div id="col3" class="col pr-4"></div>
+      <div id="col4" class="col pr-4"></div>
+    </div>
+    <!-- days of the month -->
+    <div class="row row-cols-4 pl-1">
+      <div id="month-col1" class="col pr-4"></div>
+      <div id="month-col2" class="col pr-4"></div>
+      <div id="month-col3" class="col pr-4"></div>
+      <div id="month-col4" class="col pr-4"></div>
+    </div>
+    <div class="row row-cols-4 pl-1">
+      <div id="month-col5" class="col pr-4"></div>
+      <div id="month-col6" class="col pr-4"></div>
+      <div id="month-col7" class="col pr-4"></div>
+      <div id="month-col8" class="col pr-4"></div>
+    </div>
+    <div class="row row-cols-4 pl-1">
+      <div id="month-col9" class="col pr-4"></div>
+      <div id="month-col10" class="col pr-4"></div>
+      <div id="month-col11" class="col pr-4"></div>
+      <div id="month-col12" class="col pr-4"></div>
+    </div>
+    <img class="float-right" src="../logos/H.gif" width="13px" height="13px" />
+  </div>
+  <script>
+    require('../js/index.js');
+  </script>
+</body>
+
+</html>
